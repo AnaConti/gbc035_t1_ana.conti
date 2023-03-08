@@ -1,0 +1,9 @@
+**/.vscode
+**/*.code-workspace
+**/*.gitattributes
+**/*.exe
+**/*.out
+**/*.o
+**/*.jpg
+**/*.pdf
+main
