@@ -4,5 +4,11 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"files.exclude": {
+			".gitattributes": true,
+			".gitignore": true,
+			"gitignore": true
+		}
+	}
 }
