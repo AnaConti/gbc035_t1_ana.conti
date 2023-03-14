@@ -89,7 +89,7 @@ public class principal {
         Scanner sc= new Scanner(System.in);
         int[] vet = new int[5];
         int maior, menor, soma=0;
-        double media=0;
+        double media;
 
         System.out.println("<< 5 valores>>");
 
@@ -126,7 +126,7 @@ public class principal {
         Scanner sc= new Scanner(System.in);
         int[] vet = new int[5];
         int maior, menor, soma=0, indiceMaior=0, indiceMenor=0;
-        double media=0;
+        double media;
 
         System.out.println("<< 5 valores>>");
 
@@ -191,8 +191,8 @@ public class principal {
     public static void ex08(){
         Scanner sc= new Scanner(System.in);
         int[] vet = new int[5];
-        int maior, menor, soma=0;
-        double media=0, desvioPadrao, variancia;
+        int maior, soma=0;
+        double media, desvioPadrao, variancia;
 
         System.out.println("<< Media e desvio padrao>>");
 
@@ -252,8 +252,201 @@ public class principal {
         System.out.println("Média da turma: " + media);
     }
 
+    public static void ex10(){
+        Scanner sc = new Scanner(System.in);
+        
+        int[] A = new int[3];
+        int[] B = new int[3];
+        int[] C = new int[3];
+        
+        System.out.println("<<Subtracao de vetores>>");
+        System.out.println("Digite os valores do array A:");
+        for (int i = 0; i < 3; i++) {
+            A[i] = sc.nextInt();
+        }
+        
+        System.out.println("Digite os valores do array B:");
+        for (int i = 0; i < 3; i++) {
+            B[i] = sc.nextInt();
+        }
+        
+        for (int i = 0; i < 3; i++) {
+            C[i] = A[i] - B[i];
+        }
+        
+        System.out.println("Os valores do array C são:");
+        for (int i = 0; i < 3; i++) {
+            System.out.println(C[i]);
+        }
+    }
     
-    public static void main(String[] args) {
+    public static void ex11(){
+        Scanner sc= new Scanner(System.in);
+
+        int[] v = new int[3];
+        int[] v1 = new int[3];
+        int[] v2 = new int[3];
+        int count1 = 0;
+        int count2 = 0;
+        
+        System.out.println("<<Pares e impares>>");
+        
+        for (int i = 0; i < 3; i++) {
+            System.out.printf("Entre com o número %d:\n",i+1);
+            v[i] = sc.nextInt();
+
+            if (v[i] % 2 == 0) { 
+                v2[count2] = v[i];
+                count2++;
+            } else { 
+                v1[count1] = v[i];
+                count1++;
+            }
+        }
+
+        System.out.println("Impares:");
+        for (int i = 0; i < count1; i++) {
+            System.out.println(v1[i]);
+        }
+        
+        System.out.println("Pares:");
+        for (int i = 0; i < count2; i++) {
+            System.out.println(v2[i]);
+        }
+         
+    }
+
+    public static void ex12(){
+        Scanner sc = new Scanner(System.in);
+        int azul, verde, amarelo,vermelho,total;
+        double prob_azul, prob_verde, prob_amarelo, prob_vermelho;
+        System.out.println("Digite a quantidade de bolas azuis:");
+        azul = sc.nextInt();
+        
+        System.out.println("Digite a quantidade de bolas verdes:");
+        verde = sc.nextInt();
+        
+        System.out.println("Digite a quantidade de bolas amarelas:");
+        amarelo = sc.nextInt();
+        
+        System.out.println("Digite a quantidade de bolas vermelhas:");
+        vermelho = sc.nextInt();
+        
+        total = azul + verde + amarelo + vermelho;
+        
+        prob_azul = (double) azul / total;
+        prob_verde = (double) verde / total;
+        prob_amarelo = (double) amarelo / total;
+        prob_vermelho = (double) vermelho / total;
+        
+        System.out.println("A probabilidade de ocorrência de cada cor é:");
+        System.out.printf("Azul: %.2f%%\n", prob_azul * 100);
+        System.out.printf("Verde: %.2f%%\n", prob_verde * 100);
+        System.out.printf("Amarelo: %.2f%%\n", prob_amarelo * 100);
+        System.out.printf("Vermelho: %.2f%%\n", prob_vermelho * 100);
+        
+        if (prob_azul >= prob_verde && prob_azul >= prob_amarelo && prob_azul >= prob_vermelho) {
+            System.out.println("A cor com maior probabilidade é a azul.");
+        } else if (prob_verde >= prob_amarelo && prob_verde >= prob_vermelho) {
+            System.out.println("A cor com maior probabilidade é a verde.");
+        } else if (prob_amarelo >= prob_vermelho) {
+            System.out.println("A cor com maior probabilidade é a amarela.");
+        } else {
+            System.out.println("A cor com maior probabilidade é a vermelha.");
+        }
+    }
+
+    public static void ex13(){
+        Scanner sc = new Scanner(System.in);
+        int []vet= new int[5];
+
+        System.out.println("<<Zerando negativos>>");
+        for (int i = 0; i < 5; i++) {
+            System.out.printf("Digite o valor da posição %d do vetor: ", i);
+            vet[i] = sc.nextInt();
+        }
+        
+        for (int i = 0; i < 5; i++) {
+            if (vet[i] < 0) {
+                vet[i] = 0;
+            }
+        }
+        
+        System.out.println("Vetor final:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(vet[i]);
+        }
+
+    }
+
+    public static void ex14(){
+        Scanner sc = new Scanner(System.in);
+        int n;
+
+        System.out.println("<<Universidade X>>");
+        System.out.print("Digite o número de alunos a serem cadastrados (máximo 10000): ");
+        n = sc.nextInt();
+        while (n < 1 || n > 10000) {
+            System.out.print("Valor inválido. Digite o número de alunos a serem cadastrados (máximo 10000): ");
+            n = sc.nextInt();
+        }
+        int[] matriculas = new int[n];
+        char[] classesSociais = new char[n];
+        double[] cra = new double[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.printf("Digite a matrícula do aluno %d: ", i + 1);
+            matriculas[i] = sc.nextInt();
+
+            System.out.printf("Digite a classe social do aluno %d (A, B, C, D ou E): ", i + 1);
+            classesSociais[i] = sc.next().charAt(0);
+            while (classesSociais[i] != 'A' && classesSociais[i] != 'B' && classesSociais[i] != 'C' && classesSociais[i] != 'D' && classesSociais[i] != 'E') {
+                System.out.print("Classe social inválida. Digite a classe social do aluno (A, B, C, D ou E): ");
+                classesSociais[i] = sc.next().charAt(0);
+            }
+
+            System.out.printf("Digite o CRA do aluno %d: ", i + 1);
+            cra[i] = sc.nextDouble();
+        }
+
+        System.out.println("Dados dos alunos cadastrados:");
+        System.out.println("Matrícula\tClasse Social\tCRA");
+
+        for (int i = 0; i < n; i++) {
+            System.out.printf("%d\t\t%c\t\t%.2f\n", matriculas[i], classesSociais[i], cra[i]);
+        }
+    }
+
+    public static void ex15(){
+        Scanner sc = new Scanner(System.in);
+        int[] vetor = new int[8];
+        ArrayList<Integer> repetidos = new ArrayList<>();
+
+        System.out.println("<<Valores repetidos>>");
+        System.out.println("Digite 8 números inteiros:");
+        for (int i = 0; i < 8; i++) {
+            vetor[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = i + 1; j < 8; j++) {
+                if (vetor[i] == vetor[j] && !repetidos.contains(vetor[i])) {
+                    repetidos.add(vetor[i]);
+                }
+            }
+        }
+
+        if (repetidos.isEmpty()) {
+            System.out.println("Não há valores repetidos.");
+        } else {
+            System.out.print("Valores repetidos: ");
+            for (int i = 0; i < repetidos.size(); i++) {
+                System.out.print(repetidos.get(i) + " ");
+            }
+        }
+    }
+
+        public static void main(String[] args) {
         //ex01();
         //ex02();
         //ex03();
@@ -263,6 +456,11 @@ public class principal {
         //ex07();
         //ex08();
         //ex09();
+        //ex10();
+        //ex11();
+        //ex12();
+        //ex13();
+        //ex14();
     }
 
 
