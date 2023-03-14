@@ -420,7 +420,6 @@ public class principal {
     public static void ex15(){
         Scanner sc = new Scanner(System.in);
         int[] vetor = new int[8];
-        ArrayList<Integer> repetidos = new ArrayList<>();
 
         System.out.println("<<Valores repetidos>>");
         System.out.println("Digite 8 números inteiros:");
@@ -428,20 +427,51 @@ public class principal {
             vetor[i] = sc.nextInt();
         }
 
-        for (int i = 0; i < 8; i++) {
-            for (int j = i + 1; j < 8; j++) {
-                if (vetor[i] == vetor[j] && !repetidos.contains(vetor[i])) {
-                    repetidos.add(vetor[i]);
+        boolean temRepetidos = false;
+        for (int i = 0; i < 7 && !temRepetidos; i++) {
+            for (int j = i + 1; j < 8 && !temRepetidos; j++) {
+                if (vetor[i] == vetor[j]) {
+                    temRepetidos = true;
                 }
             }
         }
 
-        if (repetidos.isEmpty()) {
-            System.out.println("Não há valores repetidos.");
+        if (temRepetidos) {
+            System.out.println("Os valores repetidos no vetor são:");
+            for (int i = 0; i < 7; i++) {
+                for (int j = i + 1; j < 8; j++) {
+                    if (vetor[i] == vetor[j]) {
+                        System.out.println(vetor[i]);
+                        break;
+                    }
+                }
+            }
         } else {
-            System.out.print("Valores repetidos: ");
-            for (int i = 0; i < repetidos.size(); i++) {
-                System.out.print(repetidos.get(i) + " ");
+            System.out.println("Não existem valores repetidos no vetor.");
+        }
+    }
+
+    public static void ex16(){
+        Scanner sc = new Scanner(System.in);
+        int[] vetor = new int[8];
+
+        
+        for (int i = 0; i < 8; i++) {
+            System.out.print("Digite o " + (i + 1) + "º número: ");
+            vetor[i] = sc.nextInt();
+        }
+
+        for (int i = 0; i < 8; i++) {
+            int contador = 0;
+
+            for (int j = i + 1; j < 8; j++) {
+                if (vetor[i] == vetor[j]) {
+                    contador++;
+                }
+            }
+
+            if (contador > 0) {
+                System.out.println("O número " + vetor[i] + " aparece " + (contador + 1) + " vezes na lista.");
             }
         }
     }
@@ -461,6 +491,8 @@ public class principal {
         //ex12();
         //ex13();
         //ex14();
+        //ex15();
+        ex16();
     }
 
 
