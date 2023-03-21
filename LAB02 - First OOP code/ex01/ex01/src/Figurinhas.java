@@ -1,2 +1,5 @@
-package PACKAGE_NAME;public class Figurinhas {
+public class Figurinhas {
+    public String nome, dataNasc, posicao, pais;
+    public double altura, peso; 
+    
 }
