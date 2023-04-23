@@ -1,4 +1,4 @@
-public class Main {
+public class Empresa {
     public static void main(String[] args) {
         Figurinhas fig = new Figurinhas("ANA", "14/12/2001", 
         "Lateral", "Brazil", 1.67, 75.00);
