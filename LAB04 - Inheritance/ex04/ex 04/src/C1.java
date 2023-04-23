@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class C1 {
+public class C1 {
+    public int num;
+    protected 
 }

@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class C2 {
+public class C2 extends C1{
 }
