@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class Operarios {
+public class Operarios extends Funcionarios{
+
+    public Operarios(String nome, String dataNasc, double salario){
+        super(nome, dataNasc, salario);
+    }
 }
