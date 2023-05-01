@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class Esfera {
+public class Esfera extends FormaTridimensional{
 }

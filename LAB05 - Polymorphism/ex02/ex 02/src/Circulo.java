@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class Circulo {
+public class Circulo extends FormaBidimensional{
 }

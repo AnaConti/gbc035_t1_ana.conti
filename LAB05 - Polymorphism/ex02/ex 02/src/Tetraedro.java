@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class Tetraedro {
+public class Tetraedro extends FormaTridimensional{
 }

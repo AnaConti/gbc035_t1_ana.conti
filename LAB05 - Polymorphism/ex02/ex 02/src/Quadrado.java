@@ -1,2 +1,2 @@
-package PACKAGE_NAME;public class Quadrado {
+public class Quadrado extends FormaBidimensional{
 }
