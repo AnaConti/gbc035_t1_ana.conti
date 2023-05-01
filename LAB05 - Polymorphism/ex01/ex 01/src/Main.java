@@ -14,5 +14,8 @@ public class Main {
         for(int i =0; i<funcionarios.length; i++){
             System.out.println(funcionarios[i].toString());
         }
+
+        funcionarios[4] = new FolhaPagamento("Joao", "15/06/2000", 2500.00);
+        ((FolhaPagamento)funcionarios[4]).toString();
     }
 }
