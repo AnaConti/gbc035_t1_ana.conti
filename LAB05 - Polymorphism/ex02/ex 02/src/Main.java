@@ -13,39 +13,51 @@ public class Main {
 
 
         for(int i=0; i< formas.length; i++){
-            if(formas[i].getNome()== "Quadrado"){
+            switch(formas[i].getNome()){
+                case "Quadrado":
+                    ((Quadrado) formas[i]).calculaArea();
+                    System.out.println(formas[i].toString());
+                    break;
 
-                ((Quadrado) formas[i]).calculaArea();
-                System.out.println(formas[i].toString());
-            }
-            else if(formas[i].getNome()== "Triangulo"){
+                case "Triangulo":
+                    ((Triangulo) formas[i]).calculaArea();
+                    System.out.println(formas[i].toString());
+                    break;
 
-                ((Triangulo) formas[i]).calculaArea();
-                System.out.println(formas[i].toString());
-            }
-            else if(formas[i].getNome()== "Circulo"){
+                case "Circulo":
+                    ((Circulo) formas[i]).calculaArea();
+                     System.out.println(formas[i].toString());
+                     break;
 
-                ((Circulo) formas[i]).calculaArea();
-                System.out.println(formas[i].toString());
-            }
-            else if(formas[i].getNome()== "Cubo"){
+                case "Cubo":
+                    ((Cubo) formas[i]).calculaArea();
+                    ((Cubo)formas[i]).calculaVolume();
+                    System.out.println(formas[i].toString());
+                    break;
 
-                ((Cubo) formas[i]).calculaArea();
-                ((Cubo)formas[i]).calculaVolume();
-                System.out.println(formas[i].toString());
-            }
-            else if(formas[i].getNome()== "Esfera"){
+                case "Esfera":
+                    ((Esfera) formas[i]).calculaArea();
+                     ((Esfera)formas[i]).calculaVolume();
+                     System.out.println(formas[i].toString());
+                     break;
 
-                ((Esfera) formas[i]).calculaArea();
-                ((Esfera)formas[i]).calculaVolume();
-                System.out.println(formas[i].toString());
-            }
-            else(formas[i].getNome()== "Tetraedro"){
+                case "Tetraedro":
+                    ((Tetraedro) formas[i]).calculaArea();
+                    ((Tetraedro)formas[i]).calculaVolume();
+                    System.out.println(formas[i].toString());
+                    break;
 
-                ((Tetraedro) formas[i]).calculaArea();
-                ((Tetraedro)formas[i]).calculaVolume();
-                System.out.println(formas[i].toString());
+                default:
+                    System.out.println("Forma não encontrada!");
+                    break;
             }
+        
+            
+            
+            
+
+                 
+            
         }
     }
 }
