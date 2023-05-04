@@ -11,7 +11,6 @@ public class Main {
         formas[4]= new Esfera(6);
         formas[5]= new Tetraedro(7);
 
-
         for(int i=0; i< formas.length; i++){
             switch(formas[i].getNome()){
                 case "Quadrado":
