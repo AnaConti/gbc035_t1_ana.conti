@@ -15,6 +15,24 @@ public class Main {
         for (Produto produto : produtos) {
             System.out.println(produto);
         }
+
+
+
+        Servico[] servicos = new Servico[5]; 
+
+        servicos[0] = new Servico(3.14);
+        servicos[1] = new Servico(15.4);
+        servicos[2] = new Servico(17.5);
+        servicos[3] = new Servico(2.8);
+        servicos[4] = new Servico(0.4);
+
+        
+        classificador.ordena(servicos);
+
+        System.out.println("\n");
+        for (Servico servico : servicos) {
+            System.out.println(servico);
+        }
     }
 
 
