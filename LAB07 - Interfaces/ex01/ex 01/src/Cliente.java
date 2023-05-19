@@ -9,4 +9,11 @@ public class Cliente implements Classificavel{
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                '}';
+    }
 }

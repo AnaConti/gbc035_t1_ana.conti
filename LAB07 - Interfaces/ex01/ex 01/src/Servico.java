@@ -9,4 +9,11 @@ public class Servico implements Classificavel{
             return false;
         }
     }
+
+    @Override
+    public String toString() {
+        return "Servico{" +
+                "preco=" + preco +
+                '}';
+    }
 }
