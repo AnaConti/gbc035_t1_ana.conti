@@ -6,7 +6,7 @@ public class Cliente implements Classificavel{
     }
     public boolean eMenorQue(Classificavel o){
         Cliente compara= (Cliente) o;
-        if(this.nome.equals(compara.nome)){
+        if(this.nome.compareTo(compara.nome)<0){
             return true;
         }else{
             return false;
