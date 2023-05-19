@@ -2,7 +2,7 @@ public class Classificador {
     public void ordena(Classificavel [] a){
         Classificavel elem, menor;
         int pos;
-        for(int i=0; a.length -1; i++){
+        for(int i=0; i< a.length -1; i++){
             elem= a[i];
             menor=a[i+1];
             pos = i+1;
