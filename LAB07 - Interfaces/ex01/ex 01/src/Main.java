@@ -33,6 +33,23 @@ public class Main {
         for (Servico servico : servicos) {
             System.out.println(servico);
         }
+
+
+        Cliente[] clientes = new Cliente[5]; 
+
+        clientes[0] = new Cliente("Ana");
+        clientes[1] = new Cliente("Beatriz");
+        clientes[2] = new Cliente("Maria");
+        clientes[3] = new Cliente("Julia");
+        clientes[4] = new Cliente("Barbara");
+
+        
+        classificador.ordena(clientes);
+
+        System.out.println("\n");
+        for (Cliente cliente : clientes) {
+            System.out.println(cliente);
+        }
     }
 
 
