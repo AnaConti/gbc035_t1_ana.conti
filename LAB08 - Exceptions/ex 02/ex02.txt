@@ -1,0 +1,44 @@
+> throw: O comando throw é usado para lançar explicitamente uma exceção dentro de um método.
+Quando usado, ele especifica qual exceção está sendo lançada e interrompe imediatamente a 
+execução normal do método. O throw é seguido por uma expressão que avalia para um objeto 
+de exceção. Esse objeto deve ser uma instância de uma classe que herda de Throwable 
+(ou seja, uma exceção). O throw é usado quando uma condição ocorre no código e queremos 
+sinalizar um evento excepcional para o sistema, fazendo com que o fluxo de controle seja 
+transferido para o bloco de tratamento de exceção adequado.
+
+> throws: A palavra-chave throws é usada na declaração de um método para indicar que esse 
+método pode lançar uma ou mais exceções verificadas (checked exceptions). As exceções 
+indicadas pelo throws são especificadas após a palavra-chave e separadas por vírgulas. 
+Quando um método lança uma exceção usando o throws, ele está informando ao código chamador
+que é responsabilidade dele lidar com essa exceção. O throws permite que o método delegue
+a responsabilidade de lidar com as exceções para quem o invocou, seja propagando a 
+exceção mais adiante ou tratando-a adequadamente.
+
+
+
+
+
+------------------------------------------------------------------------------------------
+
+Checked exceptions:
+
+São exceções verificadas pelo compilador durante o processo de compilação. O código que 
+chama um método que pode lançar uma checked exception deve lidar com essa exceção usando um
+bloco try-catch ou declarar que o método emissor também pode lançar essa exceção usando 
+a palavra-chave throws.
+Exemplos de checked exceptions são IOException, SQLException, ClassNotFoundException, 
+entre outras.
+
+Unchecked exceptions:
+
+São exceções não verificadas em tempo de compilação. O compilador não verifica se o código
+lida com essas exceções.
+As unchecked exceptions são subclasses de RuntimeException ou Error, ou subclasses dessas 
+subclasses.
+Essas exceções são geralmente relacionadas a erros de programação, como erros de lógica,
+acesso a índices inválidos em arrays, entre outros.
+O código que chama um método que pode lançar uma unchecked exception não precisa lidar com
+a exceção explicitamente (embora possa fazê-lo), pois essas exceções são lançadas durante
+a execução do programa.
+Exemplos de unchecked exceptions são NullPointerException, ArrayIndexOutOfBoundsException,
+IllegalArgumentException, entre outras.
